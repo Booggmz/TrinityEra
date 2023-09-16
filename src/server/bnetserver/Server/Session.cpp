@@ -81,10 +81,7 @@ Battlenet::Session::~Session()
 
 void Battlenet::Session::AsyncHandshake()
 {
-
-    TC_LOG_DEBUG("session", "Skip ebuchiy handshake");
-
-    //underlying_stream().async_handshake(boost::asio::ssl::stream_base::server, std::bind(&Session::HandshakeHandler, shared_from_this(), std::placeholders::_1));
+    underlying_stream().async_handshake(boost::asio::ssl::stream_base::server, std::bind(&Session::HandshakeHandler, shared_from_this(), std::placeholders::_1));
 }
 
 void Battlenet::Session::Start()
