@@ -664,7 +664,6 @@ uint32 Battlenet::Session::HandleGetAllValuesForAttribute(game_utilities::v1::Ge
 void Battlenet::Session::HandshakeHandler(boost::system::error_code const& error)
 {
         AsyncRead();
-        TC_LOG_ERROR("Skip handshake");
         return;
     if (error)
     {
